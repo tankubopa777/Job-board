@@ -2,9 +2,18 @@ type Query {
   jobs: [Job]
 }
 
-type Job {
+type Company {
   id: ID!
-  date: String!
-  title: String!
+  name: String!
   description: String
 }
+
+type Job {
+  id: ID!
+  """This is a __documentation__ for date field, in ISO-8601 format"""
+  date: String!
+  title: String!
+  company: Company!
+  description: String
+}
+
